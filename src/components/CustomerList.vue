@@ -125,5 +125,4 @@ export default {
 </script>
 
 <style scoped>
-/* 這裡可以添加組件特定的樣式 */
 </style>
