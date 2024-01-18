@@ -40,7 +40,7 @@ export default {
         async getMembers() {
             try {
                 const response = await axios.get(
-                    "http://localhost:7189/api/members"
+                    `${__API_URL__}/api/members`
                 );
                 this.customers = response.data;
             } catch (error) {
@@ -63,7 +63,7 @@ export default {
 
             try {
                 const response = await axios.post(
-                    "http://localhost:7189/api/createMember",
+                    `${__API_URL__}/api/createMember`,
                     reqData
                 );
                 console.log(response);

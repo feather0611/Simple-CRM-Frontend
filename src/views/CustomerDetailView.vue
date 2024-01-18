@@ -140,7 +140,7 @@ export default {
         async getMember() {
             try {
                 const response = await axios.get(
-                    `http://localhost:7189/api/member/${this.customerPk}`
+                    `${__API_URL__}/api/member/${this.customerPk}`
                 );
                 this.customer = response.data;
                 this.newUsername = response.data.username;
@@ -160,7 +160,7 @@ export default {
             };
             try {
                 const response = await axios.put(
-                    `http://localhost:7189/api/updateMember`,
+                    `${__API_URL__}/api/updateMember`,
                     reqData
                 );
                 this.customer = response.data;
@@ -189,7 +189,7 @@ export default {
                 };
                 try {
                     const response = await axios.post(
-                        `http://localhost:7189/api/getMemberPeriodBorrowTotal`,
+                        `${__API_URL__}/api/getMemberPeriodBorrowTotal`,
                         reqData
                     );
                     this.transactions = response.data.borrow_fees;
